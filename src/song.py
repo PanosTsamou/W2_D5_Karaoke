@@ -7,3 +7,5 @@ class Song:
         self.duration = input_duration
 
     
+
+    

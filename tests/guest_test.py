@@ -4,7 +4,7 @@ from src.guest import Guest
 class TestGuest(unittest.TestCase):
     
     def setUp(self):
-        self.guest_1 = Guest("Paul", 32, 40, "PurpleHaze", 2)
+        self.guest_1 = Guest("Paul", 32, 40, "Purple Haze", 2)
         self.guest_2 = Guest("Dave", 23, 20, "Whole Lotta Love", 1)
         
     def test_name_of_guest1(self):
@@ -17,7 +17,7 @@ class TestGuest(unittest.TestCase):
         self.assertEqual(40, self.guest_1.wallet)
     
     def test_song_to_listen_of_guest1(self):
-        self.assertDictEqual("Purple Haze", str(self.guest_1.pref_song))
+        self.assertEqual("Purple Haze", self.guest_1.pref_song)
 
     def test_of_hours_to_stay_guest1(self):
         self.assertEqual(2,self.guest_1.hours_to_stay)
@@ -36,7 +36,7 @@ class TestGuest(unittest.TestCase):
         self.assertEqual(20, self.guest_2.wallet)
     
     def test_song_to_listen_of_guest2(self):
-        self.assertDictEqual("Whole Lotta Love", self.guest_2.pref_song)
+        self.assertEqual("Whole Lotta Love", self.guest_2.pref_song)
 
     def test_of_hours_to_stay_guest2(self):
         self.assertEqual(1,self.guest_2.hours_to_stay)
