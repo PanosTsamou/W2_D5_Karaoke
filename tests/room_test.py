@@ -22,11 +22,14 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Purple Haze", self.room_1.free_songs)
     
     def test_free_room(self):
-        self.assertEqual(True,self.room_1.check_availability())
+        self.assertEqual(True,self.room_1.room_avaible)
+
+    def test_if_the_group_fit_in_room(self):
+        self.assertEqual(True,self.room_1.check_if_they_fit(2))
 
     def test_add_gust_in_the_room(self):
         self.room_1.add_guests(self.guest_1)
-        self.assertEqual(False, self.room_1.check_availability())
+        self.assertEqual(False, self.room_1.room_avaible)
         self.assertEqual(1, len(self.room_1.guests))
         self.assertEqual(1, len(self.room_1.guest_songs))
         self.assertEqual(2, self.room_1.hours_occupied)
@@ -34,7 +37,7 @@ class TestRoom(unittest.TestCase):
     def test_clear_the_room(self):
         self.room_1.add_guests(self.guest_1)
         self.room_1.room_clear()
-        self.assertEqual(True, self.room_1.check_availability())
+        self.assertEqual(True, self.room_1.room_avaible)
         self.assertEqual(0, len(self.room_1.guests))
         self.assertEqual(0, len(self.room_1.guest_songs))
         self.assertEqual(0, self.room_1.hours_occupied)
