@@ -26,6 +26,10 @@ class TestGuest(unittest.TestCase):
         self.guest_1.decrease_monies(5)
         self.assertEqual(35,self.guest_1.wallet)
 
+    def test_preferred_item_guest1(self):
+        self.guest_1.add_preferences('coke')
+        self.assertEqual(1,len(self.guest_1.preferences))
+
     def test_name_of_guest2(self):
         self.assertEqual("Dave", self.guest_2.name)
 
@@ -44,3 +48,7 @@ class TestGuest(unittest.TestCase):
     def test_reduce_money_guest2(self):
         self.guest_2.decrease_monies(7)
         self.assertEqual(13,self.guest_2.wallet)
+
+    def test_preferred_item_guest2(self):
+        self.guest_2.add_preferences('pasta')
+        self.assertEqual(1,len(self.guest_2.preferences))
