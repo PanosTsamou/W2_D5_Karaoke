@@ -48,10 +48,10 @@ class Karaoke:
         for room in self.all_rooms:
             if room.room_capacity == booking.number_people and room.fee <= booking.guest.wallet and room.room_avaible and booking.guest.age >= 18:
                 results = room
-        if results is None:
+        if results == None:
             for room in self.all_rooms:
                 if room.room_capacity < booking.number_people and room.fee <= booking.guest.wallet and room.room_avaible and booking.guest.age >= 18:
-                    results = room
+                    results = room            
         return results    
 
     def cheer_loudly(self, guest_booking):
@@ -79,3 +79,5 @@ class Karaoke:
                 self.bar.add_monies( self.bar.pay_for_bar_tab(booking.guest))
                 room.room_clear()
                 self.rooms_occupied.remove(room)
+                del(self.bar.guest_tab[booking.guest.name])
+                

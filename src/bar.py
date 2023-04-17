@@ -175,6 +175,7 @@ class Bar:
                 break 
             else:
                 results = self.guest_tab[guest_name]["tab_money"]
+                return results
                 del(self.guest_tab[guest_is_paying.name])   
                 return results
                 
