@@ -9,7 +9,7 @@ from src.bar import Bar
 class KaraokeTest(unittest.TestCase):
 
     def setUp(self):
-        self.guest_1 = Guest("Paul", 32, 100, "Tennessee Whiskey", 2)
+        self.guest_1 = Guest("Paul", 32, 100, "Dog Eat Dog", 2)
         self.guest_2 = Guest("Dave", 15, 20, "Purple Haze", 1)
         self.free_song = FreeListSong()
         self.bar = Bar(300)
