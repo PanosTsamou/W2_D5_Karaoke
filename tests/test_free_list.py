@@ -1,5 +1,5 @@
 import unittest
-from src.free_list_song import FreeListSong
+from src.songs.free_list_song import FreeListSong
 
 class TestFreeListSong(unittest.TestCase):
 

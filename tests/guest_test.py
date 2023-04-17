@@ -1,5 +1,5 @@
 import unittest
-from src.guest import Guest
+from src.guests.guest import Guest
 
 class TestGuest(unittest.TestCase):
     

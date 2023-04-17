@@ -7,7 +7,7 @@ class FreeListSong:
         self.creat_the_list()
 
     def creat_the_list(self):
-        with open('src/karafuncatalog.csv') as csv_file:
+        with open('src/songs/karafuncatalog.csv') as csv_file:
             csv_reader = csv.reader(csv_file, delimiter=';')
             for row in csv_reader:
                 self.free_song.append(str(row[1]).title())

@@ -7,7 +7,7 @@ class Guest():
         self.pref_song = input_pref_song
         self.hours_to_stay = input_hours_to_stay
 
-    def decrease_monies(self,amount):
+    def decrease_monies(self, amount):
         self.wallet -= amount
 
         
